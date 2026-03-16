@@ -11,12 +11,17 @@ export default function SocketProvider({ children }) {
   useEffect(() => {
     if (!user?.data?.id) return;
 
-    const newSocket = io(import.meta.env.VITE_SOCKET_URL, {
-      query: {
-        id: user.data.id,
-        role: user.data.role,
-      },
-    });
+    const newSocket = io(
+      import.meta.env.VITE_SOCKET_URL || window.location.origin,
+      {
+        withCredentials: true,
+        transports: ['websocket'],
+        query: {
+          id: user.data.id,
+          role: user.data.role,
+        },
+      }
+    );
 
     socketRef.current = newSocket;
 
