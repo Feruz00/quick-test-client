@@ -298,6 +298,7 @@ const AdminPage = () => {
                 title="Actions"
                 width="150px"
                 align="center"
+                // fixed="right"
                 render={(_, record) => (
                   <Space>
                     {record.id !== userData?.data?.id && (

@@ -34,6 +34,7 @@ const QrCodeShowModal = ({ open, onCancel, joinCode }) => {
       footer={null}
       destroyOnClose
       centered
+      width="xl"
       title={
         <span className="text-lg font-semibold">
           Join to competition with QR Code
@@ -42,7 +43,7 @@ const QrCodeShowModal = ({ open, onCancel, joinCode }) => {
     >
       <div className="flex flex-col items-center gap-4 mt-4">
         <div ref={qrRef}>
-          <QRCode value={address} size={500} />
+          <QRCode value={address} size={250} />
         </div>
 
         <div className="flex gap-3 justify-between w-full">

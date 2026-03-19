@@ -245,7 +245,7 @@ const EventsPage = () => {
               <Column
                 title="Title"
                 dataIndex="title"
-                fixed="left"
+                // fixed="left"
                 width="15rem"
                 render={(text) => (
                   <span className="text-white font-medium">{text}</span>
@@ -294,8 +294,8 @@ const EventsPage = () => {
               <Column
                 key="actions"
                 title="Actions"
-                width="14rem"
-                fixed="right"
+                width="12rem"
+                // fixed="right"
                 align="center"
                 render={(_, record) => {
                   const { status } = record;
